@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+<body>
+ <div class="login">
+	<h1>Prediction for customer is taking Loan or Not</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Age" placeholder="Age of a person" required="required" /><br><br>
+        <input type="text" name="Experince" placeholder="experience with bank" required="required" /><br><br>
+		<input type="text" name="Income" placeholder="Income of coustumer" required="required" /><br><br>
+                <input type="text" name="Family" placeholder="Family members" required="required" /><br><br>
+                <input type="text" name="CCAvg" placeholder="CCAvg" required="required" /><br><br>
+                <input type="text" name="Education" placeholder="Education of coustumer" required="required" /><br><br>   
+                <input type="text" name="Mortgage" placeholder="Mortgage of coustumer" required="required" /><br><br> 
+                <input type="text" name="Securities Account" placeholder="Securities Account of coustumer or not" required="required" /><br><br>
+                <input type="text" name="CD Account" placeholder="CD Account of coustumer" required="required" /><br><br>
+                <input type="text" name="Online" placeholder="customer is online or not " required="required" /><br><br>
+                <input type="text" name="CreditCard" placeholder="coustumer is creditcard holder" required="required" /><br><br>
+  
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button><br>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
